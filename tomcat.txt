@@ -1,0 +1,19 @@
+tomcat配置：
+	%TOMCAT_HOME%
+	%CATALINA_HOME%
+	%CATALINA_BASE%
+	CLASSPATH
+	PATH
+	
+/conf/tomcat-users.xml
+	<role rolename="admin-gui"/>---rolename固定
+	<role rolename="manager-gui"/>----rolename固定
+	<user username="admin" password="admin" roles="admin-gui"/>
+	<user username="both" password="both" roles="admin-gui,manager-gui"/>
+	<user username="role1" password="role1" roles="manager-gui"/>
+	
+
+tomcat嵌入eclipse：
+	属性--server--runtime Envi：添加服务器
+	server窗口--右键--open：
+		修改server location为安装的tomcat

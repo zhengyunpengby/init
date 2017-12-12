@@ -1,0 +1,41 @@
+git 命令记录
+
+git init:创建库
+	git init --bare
+git add filename:增加文件
+	git add .:增加当前文件夹下所有文件
+git cat-file -p sha1（sha1-pre）:查看文件内容（sha1为object中数字/文件名的数字（16进制）+文件名-文件名为sha1）
+git rev-parse sha1-pre:通过散列前缀查询散列值（sha1为object中数字（16进制）/文件名的数字+文件名-文件名为sha1）
+git ls-files -s:查看git中的文件
+git write-tree:写入树对象
+git commit-tree sha1:提交树
+git commit -m "":提交所有文件
+git tag -m "Tag version 1.0" V1.0 sha1（sha1-pre）:创建提交树的标签
+git rev-parse V1.0:查看标签sha1
+git status:查看索引状态
+git config user.name "":配置用户名
+git config user.email "":配置email
+	git config -l:
+git log:
+	git log filename:
+	git log --follow filename:
+	git log --graph
+git show sha1（sha1-pre）:
+git show-branch --more=n:
+git diff sha1 sha1:
+	git diff --cached sha1 :
+git rm filename:
+git clone dirname dirname_clone:(克隆出的新文件不能为已创建库)
+	git clone --bare dirname dirname_clone
+git hash-object filename:
+git checkout HEAD filename:
+git symbolic-ref:
+gitk:
+git bisect:
+git blame:
+git log -S:(Pickaxe)
+git branch branchname start-point:
+	git branch -d :删除分支
+git checkout:
+	git checkout -b:创建并检出分支
+git merge:

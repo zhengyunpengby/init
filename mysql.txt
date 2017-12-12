@@ -1,0 +1,39 @@
+mysql5.7.20配置：
+	修改host，删除localhost
+	安装前新建data目录；
+	配置MYSQL_HOME：
+	新建my.ini文件：
+		[client]
+		default-character-set=utf-8
+		[mysqld]
+		#解压目录
+		basedir = %MYSQL_HOME%
+		#解压目录
+		datadir = %MYSQL_HONE%\data
+		port = 3306
+		default-character-set=utf-8
+		
+mysql安装:
+	mysqld --initialize-insecure user=mysql:生成无密码的root用户
+	net start mysql:启动mysql服务
+	mysqladmin -u root password root:新建用户root
+	mysql -u root -p:连接服务器
+	
+MySQL命令：(需用;结束)
+	show databases;
+	create database dbname;
+	drop database dbname;
+	use dbname;
+	
+	show tables;
+	create table tabname() engine = MYISAM;	MYISAM为存储引擎
+	describe tabname;
+	select * from tabname;
+	alter table tabname change colname colname char(10);
+	source sql.sql;导入sql文件
+	
+	
+	
+	
+
+	
